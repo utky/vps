@@ -1,0 +1,14 @@
+---
+- hosts: docker-engines
+  become: yes
+  handlers:
+    - name: restart docker
+      service:
+        name: docker
+        state: restarted
+  tasks:
+    - name: install docker
+      yum:
+        name: docker-io
+        state: present
+      notify: restart docker
