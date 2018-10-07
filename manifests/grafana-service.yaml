@@ -5,7 +5,6 @@ metadata:
   name: grafana
 spec:
   type: NodePort
-  externalTrafficPolicy: Local
   ports:
     - name: "grafana-ui"
       protocol: "TCP"

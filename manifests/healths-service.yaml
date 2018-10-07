@@ -5,7 +5,6 @@ metadata:
   name: healths
 spec:
   type: NodePort
-  externalTrafficPolicy: Local
   ports:
     - name: "healths-api"
       protocol: "TCP"
